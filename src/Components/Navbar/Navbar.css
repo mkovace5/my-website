@@ -1,5 +1,7 @@
+@import "../../App.css";
+
 .navbar {
-    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background: var(--main-color);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -37,8 +39,13 @@
     display: flex;
     
   }
+
+  .nav-logo{
+    color: var(--text-color);
+    text-decoration: none;
+  }
   .nav-links {
-    color: #000000;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -103,11 +110,11 @@
       border-radius: 0;
     }
   
-    .navbar-logo {
+    .nav-logo {
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(25%, 50%);
+      transform: translate(25%, 50%);      
     }
   
     .menu-icon {

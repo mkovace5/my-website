@@ -1,0 +1,15 @@
+@import "../../App.css";
+
+
+.home{
+    background-color: var(--main-color);
+    display: flex;
+    height: 100%;
+    overflow:hidden;
+
+}
+
+.home-container{
+    display: flex;
+    height: 100vh;
+}

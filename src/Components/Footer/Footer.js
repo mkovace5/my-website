@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import './Footer.css';
+import facebook from '../../images/facebook.svg';
 
 function Footer () {
     
@@ -12,7 +13,9 @@ function Footer () {
             </div>
             <div className="links-container">
                 <Link className="link">LinkedIn</Link>
-                <Link className="link"to={'https://www.linkedin.com/in/mina-kovacevic-a41524192/'} target="_blank">GitHub</Link>
+                <Link className="link">Email</Link>
+                <Link className="link">LinkedIn</Link>
+                <Link className="link">GitHub</Link>
             </div>
             <Link className="link"></Link>
         </div>

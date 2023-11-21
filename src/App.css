@@ -1,0 +1,12 @@
+:root {
+    --main-color:#1a1a1a;
+    --text-color: #f3f3f3;
+}
+
+.app-container{
+    background-color: var(--main-color);
+}
+
+html,body{
+    height: 100%;
+}

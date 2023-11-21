@@ -1,16 +1,19 @@
+@import "../../App.css";
+
 
 .footer-container{
     display: flex;
     flex-direction: row;
-    background: linear-gradient(90deg, rgb(72, 70, 70) 0%, rgb(73, 70, 70) 100%);
+    background-color: var(--main-color);
     width: 100%;
     max-width: 1500px;
     height: 80px;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     align-items: center;
     justify-content: flex-start;
     padding: 10px 20px;
+    z-index: 999;
 }
 
 .name-container{
@@ -22,7 +25,7 @@
 }
 
 h3{
-    color: white;
+    color: var(--text-color);
     margin:0;
     font-size: 20px;
 }
@@ -33,6 +36,6 @@ h3{
 }
 
 .link{
-    color: white;
+    color: var(--text-color);
 
 }
