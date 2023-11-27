@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import navbar_img from '../../images/navbar_img.JPG';
 import {Link} from 'react-router-dom'; 
-import './Navbar.css';
-import { Button } from '../Button';
+import './Navbar.scss';
+import { Button } from '../Button/Button';
 
 
 function Navbar(){
@@ -13,15 +13,12 @@ function Navbar(){
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
-    const showButton = () => {
-        if(window.innerWidth <= 960){
-            setButton(false);
-        }else{
-            setButton(true);
-        }
-    };
 
-    window.addEventListener('resize', showButton);
+    // window.addEventListener('resize', showButton);
+
+    const bringTo = () => {
+        closeMobileMenu();
+    }
 
     return(
         <div>
@@ -36,19 +33,19 @@ function Navbar(){
                     <div className="nav-links-container">
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
-                                <Link to='/About' className='nav-links' onClick={closeMobileMenu}>
+                                <Button onClick={bringTo} className='nav-links' >
                                     ABOUT
-                                </Link>
+                                </Button>
                             </li>
                             <li className='nav-item'>
-                                <Link to='/Work' className='nav-links' onClick={closeMobileMenu}>
+                                <Button className='nav-links' onClick={closeMobileMenu}>
                                     WORK
-                                </Link>
+                                </Button>
                             </li>
                             <li className='nav-item'>
-                                <Link to='/Contact' className='nav-links' onClick={closeMobileMenu}>
+                                <Button className='nav-links' onClick={closeMobileMenu}>
                                     CONTACT
-                                </Link>
+                                </Button>
                             </li>
                         </ul>
                     </div>                    

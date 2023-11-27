@@ -14,3 +14,17 @@
 html,body{
     height: 100%;
 }
+
+h1,h2,h3, p{
+     color: var(--text-color);
+     font-weight: 200;
+     font-family: var(--header-font);
+}
+
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-size: 18px;
+}
