@@ -1,5 +1,46 @@
 @import '../../App.css';
 
-.experience-container{
-    
+.experience{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .experience-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .content{
+            display: flex;
+            flex-direction: column;
+
+            .experience-title{
+                display: flex;
+
+                .date{
+                    color: #BFBEBE;
+                    margin:0 10px 0 0;
+                }
+                .title-location-container{
+                    display: flex;
+                    flex-direction: column;
+
+                    .location{
+                        margin: 5px 0 0 0;
+                    }
+                }
+            }
+
+            .experience-description{
+                display: flex;
+                flex-direction: column;
+                max-width: 678px;
+
+                li{
+                    color: var(--text-color);
+                }
+            }
+        }
+    }
 }
