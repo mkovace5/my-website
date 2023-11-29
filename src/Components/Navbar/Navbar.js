@@ -5,7 +5,7 @@ import './Navbar.scss';
 import { Button } from '../Button/Button';
 
 
-function Navbar(){
+function Navbar({aboutRef, experienceRef, contactRef}){
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -13,6 +13,24 @@ function Navbar(){
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
 
+    function executeScroll (button) {
+        closeMobileMenu();
+        if(button == 'about'){
+            aboutRef.current.scrollIntoView();
+        }else if(button == 'experience'){
+            experienceRef.current.scrollIntoView();
+        }else if(button == 'contact'){
+            contactRef.current.scrollIntoView();
+        }        
+    }
+
+    const handleScroll = (ref) => {
+        window.scrollTo({
+          top: ref.offsetTop,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
 
     // window.addEventListener('resize', showButton);
 
@@ -33,17 +51,17 @@ function Navbar(){
                     <div className="nav-links-container">
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
-                                <Button onClick={bringTo} className='nav-links' >
+                                <Button onClick={() => {handleScroll(aboutRef.current);}} className='nav-links' >
                                     ABOUT
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Button className='nav-links' onClick={closeMobileMenu}>
-                                    WORK
+                                <Button className='nav-links' onClick={() => {handleScroll(experienceRef.current);}}>
+                                    EXPERIENCE
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Button className='nav-links' onClick={closeMobileMenu}>
+                                <Button className='nav-links' onClick={() => {handleScroll(contactRef.current);}}>
                                     CONTACT
                                 </Button>
                             </li>

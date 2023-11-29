@@ -1,13 +1,29 @@
-import React, {useState} from 'react';
+import React, {useState, forwardRef} from 'react';
 import {Link} from 'react-router-dom'; 
 import './Experience.scss';
 import Work from '../../Components/Work/Work';
-import { ClassRT1,ClassRT2,ClassRT3,ClassRT4,MTO1,MTO2,MTO3, Western1, Western2 } from '../../Texts';
+import { ClassRT1,ClassRT2,ClassRT3,ClassRT4,MTO1,MTO2,MTO3,Western1,Western2 } from '../../Texts';
+import SkillsContainer from '../../Components/SkillsContainer/SkillsContainer';
 
 
-function Experience () {
+function Experience ({experienceRef}) {
+
+    const [isVisible, setVisible] = React.useState(false);
+    const domRef = React.useRef();
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setVisible(entry.isIntersecting);
+                }
+            });
+        });
+        observer.observe(experienceRef.current);
+        return () => observer.unobserve(experienceRef.current);
+    }, []);
+
     return(
-       <div className='experience'>
+       <div className={`experience ${isVisible ? 'is-visible' : ''}`} ref={experienceRef}>
             <div className="experience-container">
                <h1>EXPERIENCE</h1> 
                <Work
@@ -28,10 +44,10 @@ function Experience () {
                     location='Western University - London, ON'
                     points={[Western1, Western2]}
                 />
-
-            </div>       
+            </div> 
+            <SkillsContainer/>      
        </div>
     )
 }
 
-export default Experience;
+export default forwardRef(Experience);

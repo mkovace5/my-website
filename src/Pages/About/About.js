@@ -1,11 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, forwardRef} from 'react';
 import {Link} from 'react-router-dom'; 
 import './About.scss';
 import about_pic from '../../images/mina-pic.jpg'
 
-function About () {
+function About ( {aboutRef} ) {
+
+    const [isVisible, setVisible] = React.useState(false);
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setVisible(entry.isIntersecting);
+                }
+            });
+        });
+        observer.observe(aboutRef.current);
+        return () => observer.unobserve(aboutRef.current);
+    }, []);
+
+
     return(
-        <div className='about-container'>
+        <div className={`about-container ${isVisible ? 'is-visible' : ''}`} ref={aboutRef}>
             <img src={about_pic}/>
             <div className='about-text-container'>
                 <h1>ABOUT ME</h1>
@@ -25,4 +40,4 @@ function About () {
     )
 }
 
-export default About;
+export default forwardRef(About);

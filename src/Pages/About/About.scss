@@ -6,7 +6,39 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    opacity:0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
     
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        margin-right: 60px;
+    }
+    .about-text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h1{
+            margin-bottom: 0px;
+        }
+        .about-text{
+            max-width: 480px;
+            text-align: center;
+        }
+    }
+}
+
+.about-container.is-visible{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+
+
     img{
         width: 300px;
         height: 300px;
