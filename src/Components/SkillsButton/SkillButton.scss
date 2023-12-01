@@ -9,11 +9,22 @@
     padding: 5px 20px;
     margin-right: 12px;
     margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
 
     p{
         margin:0;
         font-size: 14px;
     }
+}
+
+.skill-button.is-visible{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
 }
 
 .skill-button:hover{

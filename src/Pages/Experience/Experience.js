@@ -9,7 +9,6 @@ import SkillsContainer from '../../Components/SkillsContainer/SkillsContainer';
 function Experience ({experienceRef}) {
 
     const [isVisible, setVisible] = React.useState(false);
-    const domRef = React.useRef();
     React.useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
