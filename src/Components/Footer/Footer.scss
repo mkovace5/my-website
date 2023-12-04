@@ -6,10 +6,9 @@
     grid-area: footer;
     background-color: var(--main-color);
     max-width: 1500px;
-    height: 80px;
+    height: 120px;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     z-index: 999;
 
     h3{
@@ -43,7 +42,7 @@
         right: 80px;
 
         .link:hover{
-            background-color: #C00E99;
+            background-color: var(--hover-color);
             border-radius: 10px;
             height: 24px;
         }

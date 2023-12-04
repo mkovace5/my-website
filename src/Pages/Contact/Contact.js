@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import './Contact.scss';
 import {Button} from '../../Components/Button/Button';
 import github from '../../images/github-sign.png';
-import linkedin from '../../images/linkedin.png'
+import linkedin from '../../images/linkedin.png';
+import backgroundImg from '../../images/navbar_img.JPG';
 
 function Contact ({contactRef}) {
 

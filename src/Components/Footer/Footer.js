@@ -5,13 +5,16 @@ import minaLogo from '../../images/mina-logo.png';
 import email from '../../images/email.png';
 import linkedin from '../../images/linkedin.png';
 import github from '../../images/github-sign.png';
+import { Button } from "../Button/Button";
 
 function Footer () {
     
     return(
         <div className="footer-container">
             <div className="name-container">
-                <img src={minaLogo} className="logo"/>
+                <Button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+                    <img src={minaLogo} className="logo"/>
+                </Button>
                 <p>Copyright © 2023 Mina Kovacevic. All rights reserved</p>
             </div>
             <div className="links-container">

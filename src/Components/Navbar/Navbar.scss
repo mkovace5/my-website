@@ -48,16 +48,10 @@
             font-family: 'Carrois Gothic SC'; 
             font-size: 20px;
             align-items: center;
-            text-decoration: none;
-            padding: 0.5rem 0rem 0.5rem 2rem;
-            border: 1px rgb(5, 5, 5);
-          }
-          .nav-links:hover {
-            border-bottom: 4px solid #C00E99;
-            transition: all 0.2s ease-out;
+            text-decoration: none;            
           }
           .btn--primary:hover{
-            border: 1px solid #C00E99;
+            border: 1px solid var(--hover-color);
           }
         }
       }
@@ -69,7 +63,7 @@
   
   
   .fa-bars {
-    color: #fff;
+    color: var(--text-color);
   }
   
   .nav-links-mobile {
