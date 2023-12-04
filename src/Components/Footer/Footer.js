@@ -15,9 +15,9 @@ function Footer () {
                 <p>Copyright © 2023 Mina Kovacevic. All rights reserved</p>
             </div>
             <div className="links-container">
-                <Link className="link" to='https://www.linkedin.com/in/mina-kovacevic-a41524192/'><img src={linkedin}/></Link>
-                <Link className="link" to='mailto:mina.k@hotmail.com' > <img src={email}/> </Link>
-                <Link className="link" to='https://github.com/mkovace5' ><img src={github} /></Link>
+                <Link className="link" to='https://www.linkedin.com/in/mina-kovacevic-a41524192/' target="_blank"><img src={linkedin}/></Link>
+                <Link className="link" to='mailto:mina.k@hotmail.com' target="_blank"> <img src={email}/> </Link>
+                <Link className="link" to='https://github.com/mkovace5' target="_blank"><img src={github} /></Link>
             </div>
             <Link className="link"></Link>
         </div>

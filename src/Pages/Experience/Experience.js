@@ -12,54 +12,12 @@ function Experience ({experienceRef}) {
     const educationTextRef = useRef(null);
     const skillsTextRef = useRef(null);
 
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setVisible(entry.isIntersecting);
-                }
-            });
-        });
-        observer.observe(experienceTextRef.current);
-        return () => {
-            observer.unobserve(experienceTextRef.current);
-        };
-    }, []);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setVisible(entry.isIntersecting);
-                }
-            });
-        });
-        observer.observe(educationTextRef.current);
-        return () => {
-            observer.unobserve(educationTextRef.current);
-        };
-    }, []);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setVisible(entry.isIntersecting);
-                }
-            });
-        });
-        observer.observe(skillsTextRef.current);
-        return () => {
-            observer.unobserve(skillsTextRef.current);
-        };
-    }, []);
-
     return(
-       <div className='experience'>
+       <div className='experience' ref={experienceRef}>
             <div className="experience-container">
-               <h1 className={`experience-text ${isVisible ? 'is-visible' : ''}`} ref={experienceTextRef}>EXPERIENCE</h1> 
+               {/* <h1 className={`experience-text ${isVisible ? 'is-visible' : ''}`} ref={experienceTextRef}>EXPERIENCE</h1>  */}
                <Work
+                    header='EXPERIENCE'
                     date='03/2021-03/2023'
                     title='FRONTENDEVELOPER'
                     location='ClassRT - Toronto, ON'
@@ -71,8 +29,8 @@ function Experience ({experienceRef}) {
                     location='Ontario Ministry of Transportation - Toronto, ON'
                     points={[MTO1,MTO2,MTO3]}
                 />
-                <h1 className={`education-text ${isVisible ? 'is-visible' : ''}`} ref={educationTextRef}>EDUCATION</h1>
                 <Work
+                    header='EDUCATION'
                     date='09/2017-04/2023'
                     title='BACHELOR OF ENGINEERING SCIENCE - BESc'
                     location='Western University - London, ON'

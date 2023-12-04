@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './Work.scss'; 
 
-function Work ( {date, title, location, points} ) {
+function Work ( {date, title, location, points, header} ) {
 
     const [isVisible, setVisible] = useState(false);
     const domRef = useRef();
@@ -19,6 +19,7 @@ function Work ( {date, title, location, points} ) {
 
     return(
         <div className={`work ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
+            <h1 className={`header ${header ? '' : 'hidden'}`}>{header}</h1>
             <div className="experience-title">
                 <p className='date'> {date}</p>
                 <div className='title-location-container'>
