@@ -2,7 +2,7 @@
 
 .btn{
     padding: 8px 20px;
-    border-radius: 10px;
+    border-radius: 50px;
     outline: none;
     border: none;
     cursor: pointer;
@@ -15,13 +15,13 @@
 }
 
 
-/* .btn--outline{
+.btn--outline{
     background-color: transparent;
-    color: #fff;
+    color: var(--text-color);
     padding: 8px 20px;
     border: 1px solid #fff;
     transition: all 0.3s ease-out;
-} */
+}
 
 .btn--med{
     padding: 8px 20px;

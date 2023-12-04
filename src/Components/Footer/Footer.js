@@ -10,6 +10,7 @@ function Footer () {
             <div className="name-container">
                 <h3>Mina</h3>
                 <h3>Kovacevic</h3>
+                <p>Copyright © 2023 Mina Kovacevic. All rights reserved</p>
             </div>
             <div className="links-container">
                 <Link className="link">LinkedIn</Link>
