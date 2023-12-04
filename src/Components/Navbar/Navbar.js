@@ -3,6 +3,7 @@ import navbar_img from '../../images/navbar_img.JPG';
 import {Link} from 'react-router-dom'; 
 import './Navbar.scss';
 import { Button } from '../Button/Button';
+import minaCV from '../../Documents/MinaKovacevic-CV.pdf';
 
 
 function Navbar({aboutRef, experienceRef, contactRef}){
@@ -64,6 +65,13 @@ function Navbar({aboutRef, experienceRef, contactRef}){
                                 <Button className='nav-links' onClick={() => {handleScroll(contactRef.current);}}>
                                     CONTACT
                                 </Button>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to={minaCV} target="_blank">
+                                    <Button className='nav-links'>
+                                        CV
+                                    </Button>
+                                </Link>
                             </li>
                         </ul>
                     </div>                    

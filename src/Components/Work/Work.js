@@ -1,12 +1,11 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, { useEffect, useRef} from 'react';
 import './Work.scss'; 
 
 function Work ( {date, title, location, points} ) {
 
     const [isVisible, setVisible] = React.useState(false);
-    const domRef = React.useRef();
-    React.useEffect(() => {
+    const domRef = useRef();
+    useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

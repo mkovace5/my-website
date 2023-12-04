@@ -2,21 +2,23 @@ import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import './Footer.scss';
 import facebook from '../../images/facebook.svg';
+import minaLogo from '../../images/mina-logo.png';
+import email from '../../images/email.png';
+import linkedin from '../../images/linkedin.png';
+import github from '../../images/github-sign.png';
 
 function Footer () {
     
     return(
         <div className="footer-container">
             <div className="name-container">
-                <h3>Mina</h3>
-                <h3>Kovacevic</h3>
+                <img src={minaLogo} className="logo"/>
                 <p>Copyright © 2023 Mina Kovacevic. All rights reserved</p>
             </div>
             <div className="links-container">
-                <Link className="link">LinkedIn</Link>
-                <Link className="link">Email</Link>
-                <Link className="link">LinkedIn</Link>
-                <Link className="link">GitHub</Link>
+                <Link className="link" to='https://www.linkedin.com/in/mina-kovacevic-a41524192/'><img src={linkedin}/></Link>
+                <Link className="link" to='mailto:mina.k@hotmail.com' > <img src={email}/> </Link>
+                <Link className="link" to='https://github.com/mkovace5' ><img src={github} /></Link>
             </div>
             <Link className="link"></Link>
         </div>
