@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useEffect, useRef, useState} from 'react';
 import './SkillButton.scss'; 
 
 function SkillButton ( {skill} ) {
-    const [isVisible, setVisible] = React.useState(false);
-    const domRef = React.useRef();
-    React.useEffect(() => {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

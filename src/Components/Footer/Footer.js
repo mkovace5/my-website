@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import './Footer.scss';
-import facebook from '../../images/facebook.svg';
 import minaLogo from '../../images/mina-logo.png';
 import email from '../../images/email.png';
 import linkedin from '../../images/linkedin.png';

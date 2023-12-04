@@ -1,12 +1,11 @@
-import React, {useState, forwardRef} from 'react';
-import {Link} from 'react-router-dom'; 
+import React, {useEffect, useState, forwardRef} from 'react';
 import './About.scss';
 import about_pic from '../../images/mina-pic.jpg'
 
 function About ( {aboutRef} ) {
 
-    const [isVisible, setVisible] = React.useState(false);
-    React.useEffect(() => {
+    const [isVisible, setVisible] = useState(false);
+    useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

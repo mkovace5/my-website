@@ -1,16 +1,15 @@
-import React, {useState, forwardRef} from 'react';
+import React, {useEffect, useRef, useState, forwardRef} from 'react';
 import {Link} from 'react-router-dom'; 
 import './Contact.scss';
 import {Button} from '../../Components/Button/Button';
-import email from '../../images/email.png';
 import github from '../../images/github-sign.png';
 import linkedin from '../../images/linkedin.png'
 
 function Contact ({contactRef}) {
 
-    const [isVisible, setVisible] = React.useState(false);
-    const domRef = React.useRef();
-    React.useEffect(() => {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {

@@ -1,7 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom'; 
-import './Intro.css';
-import { Button } from '../Button/Button';
+import React from 'react';
+import './Intro.scss';
 import mina from '../../images/mina.JPG';
 
 

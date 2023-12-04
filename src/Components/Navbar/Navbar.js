@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import navbar_img from '../../images/navbar_img.JPG';
 import {Link} from 'react-router-dom'; 
 import './Navbar.scss';
 import { Button } from '../Button/Button';
@@ -32,8 +31,6 @@ function Navbar({aboutRef, experienceRef, contactRef}){
           behavior: "smooth",
         });
       };
-
-    // window.addEventListener('resize', showButton);
 
     const bringTo = () => {
         closeMobileMenu();

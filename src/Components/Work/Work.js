@@ -1,9 +1,9 @@
-import React, { useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './Work.scss'; 
 
 function Work ( {date, title, location, points} ) {
 
-    const [isVisible, setVisible] = React.useState(false);
+    const [isVisible, setVisible] = useState(false);
     const domRef = useRef();
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
