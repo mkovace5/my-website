@@ -1,6 +1,6 @@
 import React from 'react';
 import './Intro.scss';
-import mina from '../../images/mina.JPG';
+import mina from '../../images/mina.jpeg';
 
 
 function Intro(){
