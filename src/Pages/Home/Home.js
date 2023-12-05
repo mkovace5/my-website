@@ -13,20 +13,20 @@ function Home () {
     const contactRef = useRef(null);
 
     return(
-        <>
+        <div className='home'>
             <Navbar
                 aboutRef={aboutRef}
                 experienceRef={experienceRef}
                 contactRef={contactRef}
             />
-            <div className='home'>
+            <div className='home-container'>
                 <Intro/>
                 <About aboutRef={aboutRef}/>
                 <Experience experienceRef={experienceRef}/>
                 <Contact contactRef={contactRef}/>
             </div>
             <Footer/>
-        </>
+        </div>
     )
 }
 
