@@ -12,7 +12,7 @@ function Intro(){
                 <h1>I'M MINA.</h1>
                 <p>I’M A SOFTWARE DEVELOPER WITH A PASSION FOR UX/UI DESIGN </p>
             </div>
-            <img className='main-img' src={mina}/>
+            <img src={mina}/>
         </div>
     )
 }
