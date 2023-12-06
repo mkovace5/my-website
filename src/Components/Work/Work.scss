@@ -16,6 +16,12 @@
 
     .experience-title{
         display: flex;
+        position: relative;
+        right: 120px;
+
+        .title{
+            margin-top: 0;
+        }
 
         .date{
             color: #BFBEBE;
@@ -46,4 +52,16 @@
     opacity: 1;
     transform: none;
     visibility: visible;
+}
+
+@media screen and (max-width: 1024px){
+    .work{ 
+        .experience-title{
+            right: 0;
+    
+            .title{
+                margin-bottom: 0;
+            }
+        }
+    }
 }

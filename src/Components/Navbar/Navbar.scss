@@ -73,6 +73,21 @@
   .menu-icon {
     display: none;
   }
+
+  @media screen and (max-width: 1024px) {
+    .navbar{
+      .navbar-container{
+
+        .nav-logo{
+          margin-left: 60px;
+        }
+        .nav-links-container{
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
   
   @media screen and (max-width: 960px) {
     .NavbarItems {

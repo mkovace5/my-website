@@ -8,9 +8,19 @@ import SkillsContainer from '../../Components/SkillsContainer/SkillsContainer';
 function Experience ({experienceRef}) {
 
     const [isVisible, setVisible] = useState(false);
-    const experienceTextRef = useRef(null);
-    const educationTextRef = useRef(null);
-    const skillsTextRef = useRef(null);
+    const skillsTextRef = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setVisible(entry.isIntersecting);
+                }
+            });
+        });
+        observer.observe(skillsTextRef.current);
+        return () => observer.unobserve(skillsTextRef.current);
+    }, []);
 
     return(
        <div className='experience' ref={experienceRef}>
@@ -37,8 +47,10 @@ function Experience ({experienceRef}) {
                     points={[Western1, Western2]}
                 />
             </div> 
-            <h1 className={`skills-text ${isVisible ? 'is-visible' : ''}`} ref={skillsTextRef}>SKILLS</h1>
-            <SkillsContainer/>      
+            <div className="skills">
+                <h1 className={`skills-text ${isVisible ? 'is-visible' : ''}`} ref={skillsTextRef}>SKILLS</h1>
+                <SkillsContainer/>
+            </div>      
        </div>
     )
 }
