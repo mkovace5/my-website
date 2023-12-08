@@ -5,3 +5,10 @@
     max-width: 678px;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+    .skills-container{
+        align-items: center;
+        justify-content: center;
+    }
+}

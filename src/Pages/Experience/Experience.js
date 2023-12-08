@@ -29,7 +29,7 @@ function Experience ({experienceRef}) {
                <Work
                     header='EXPERIENCE'
                     date='03/2021-03/2023'
-                    title='FRONTENDEVELOPER'
+                    title='FRONTEND DEVELOPER'
                     location='ClassRT - Toronto, ON'
                     points={[ClassRT1,ClassRT2,ClassRT3,ClassRT4]}
                />

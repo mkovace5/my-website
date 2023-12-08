@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px){
+@media screen and (max-width: 1024px){
     .intro-container{        
         height: 80vh;
         align-items: center;
@@ -43,6 +43,31 @@
             width: 357px;
             border-radius: 50px;
             height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .intro-container{
+        flex-direction: column;
+        height: 100%;
+        padding: 100px 0;
+        
+       
+        .text-container{
+            margin-right: 0;
+            h1, h3, p{
+                text-align: center;
+            }
+            h3{
+                margin-bottom: 3px;
+            }
+            h1{
+                margin:0;
+            }
+            p{
+                margin-top: 30px;
+            }
         }
     }
 }

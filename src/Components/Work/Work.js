@@ -23,7 +23,10 @@ function Work ( {date, title, location, points, header} ) {
             <div className="experience-title">
                 <p className='date'> {date}</p>
                 <div className='title-location-container'>
-                    <h3 className="title">{title}</h3>
+                    <div className='title-container-mobile'>
+                        <h3 className="title">{title}</h3>
+                        <p className='date-mobile'> {date}</p>
+                    </div>
                     <p className="location">{location}</p>
                 </div>
             </div>

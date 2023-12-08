@@ -25,6 +25,7 @@ function Navbar({aboutRef, experienceRef, contactRef}){
     }
 
     const handleScroll = (ref) => {
+        closeMobileMenu();
         window.scrollTo({
           top: ref.offsetTop,
           left: 0,
