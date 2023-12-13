@@ -65,7 +65,7 @@ function Navbar({aboutRef, experienceRef, contactRef}){
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Link to={minaCV} target="_blank">
+                                <Link to='https://mina-cv.s3.us-east-2.amazonaws.com/MinaKovacevic-CV.pdf' target="_blank">
                                     <Button className='nav-links'>
                                         CV
                                     </Button>
