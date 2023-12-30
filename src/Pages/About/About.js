@@ -21,7 +21,7 @@ function About ( {aboutRef} ) {
     return(
         <div className={`about-container ${isVisible ? 'is-visible' : ''}`} ref={aboutRef}>
             <h1 className='title-mobile'>ABOUT ME</h1>
-            <img src={about_pic}/>
+            <img src={about_pic} alt="Mina Headshot"/>
             <div className='about-text-container'>
                 <h1 className='title'>ABOUT ME</h1>
                 <p className='about-text'>
