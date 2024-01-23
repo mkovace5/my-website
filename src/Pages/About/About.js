@@ -24,7 +24,6 @@ function About ( {aboutRef} ) {
             <h1 className='title-mobile'>ABOUT ME</h1>
             <div className="img_parent">
                 <img src={about_pic} className='mina-pic' alt="Mina Headshot"/>
-                {/* <img src={zigzag} className='zigzag-frame' alt="ZigZag Frame"/> */}
             </div>
             <div className='about-text-container'>
                 <h1 className='title'>ABOUT ME</h1>
