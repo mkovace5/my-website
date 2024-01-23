@@ -15,12 +15,26 @@
     .title-mobile{
         display: none;
     }
-    img{
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
+    .img_parent{
+        background-image: url('../../images/zigzag.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-right: 60px;
+
+        .mina-pic{
+            width: 300px;
+            height: 300px;
+            border-radius: 150px;
+            z-index: 1;
+        }
+
     }
+    
     .about-text-container{
         display: flex;
         flex-direction: column;
@@ -74,8 +88,27 @@
         flex-direction: column;  
         padding: 100px 0;    
         margin: 0;  
-        img{
-            margin: 0 0 28px;
+        height: 100%;
+
+        .img_parent{
+            background-image: url('../../images/zigzag.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0;
+    
+            .mina-pic{
+                width: 250px;
+                height: 250px;
+                border-radius: 150px;
+                z-index: 1;
+                margin: 0;
+            }
+    
         }
         .title-mobile{
             display:flex;

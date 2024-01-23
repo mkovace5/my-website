@@ -1,6 +1,7 @@
 import React, {useEffect, useState, forwardRef} from 'react';
 import './About.scss';
-import about_pic from '../../images/mina-pic.jpg'
+import about_pic from '../../images/mina-pic.jpg';
+import zigzag from '../../images/zigzag.png';
 
 function About ( {aboutRef} ) {
 
@@ -21,7 +22,10 @@ function About ( {aboutRef} ) {
     return(
         <div className={`about-container ${isVisible ? 'is-visible' : ''}`} ref={aboutRef}>
             <h1 className='title-mobile'>ABOUT ME</h1>
-            <img src={about_pic} alt="Mina Headshot"/>
+            <div className="img_parent">
+                <img src={about_pic} className='mina-pic' alt="Mina Headshot"/>
+                {/* <img src={zigzag} className='zigzag-frame' alt="ZigZag Frame"/> */}
+            </div>
             <div className='about-text-container'>
                 <h1 className='title'>ABOUT ME</h1>
                 <p className='about-text'>

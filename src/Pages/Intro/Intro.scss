@@ -13,6 +13,15 @@
         flex-direction: column;
         max-width: 360px;
         margin-right: 100px;
+
+        h1{
+            -webkit-text-decoration: var(--hover-color) solid underline;
+            text-decoration: var(--hover-color) solid underline;
+            -webkit-text-underline-position: under;
+            text-underline-position: under;
+            -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy;
+        }
     }
 
     img{
