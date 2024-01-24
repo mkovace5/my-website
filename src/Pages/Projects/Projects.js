@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState, forwardRef} from 'react';
 import ProjectPreview from '../../Components/ProjectComponent/ProjectPreview';
+import './Projects.scss';
 
 
 function Projects ({projectsRef}) {
