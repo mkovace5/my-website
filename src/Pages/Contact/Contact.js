@@ -9,7 +9,6 @@ import backgroundImg from '../../images/navbar_img.JPG';
 function Contact ({contactRef}) {
 
     const [isVisible, setVisible] = useState(false);
-    const domRef = useRef();
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {

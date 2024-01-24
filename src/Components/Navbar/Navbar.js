@@ -5,24 +5,13 @@ import { Button } from '../Button/Button';
 import minaCV from '../../Documents/MinaKovacevic-CV.pdf';
 
 
-function Navbar({aboutRef, experienceRef, contactRef}){
+function Navbar({aboutRef, experienceRef, contactRef, projectsRef}){
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-
-    function executeScroll (button) {
-        closeMobileMenu();
-        if(button == 'about'){
-            aboutRef.current.scrollIntoView();
-        }else if(button == 'experience'){
-            experienceRef.current.scrollIntoView();
-        }else if(button == 'contact'){
-            contactRef.current.scrollIntoView();
-        }        
-    }
 
     const handleScroll = (ref) => {
         closeMobileMenu();
@@ -52,6 +41,11 @@ function Navbar({aboutRef, experienceRef, contactRef}){
                             <li className='nav-item'>
                                 <Button onClick={() => {handleScroll(aboutRef.current);}} className='nav-links' >
                                     ABOUT
+                                </Button>
+                            </li>
+                            <li className='nav-item'>
+                                <Button className='nav-links' onClick={() => {handleScroll(projectsRef.current);}}>
+                                    PROJECTS
                                 </Button>
                             </li>
                             <li className='nav-item'>
