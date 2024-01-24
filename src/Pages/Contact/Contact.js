@@ -30,10 +30,10 @@ function Contact ({contactRef}) {
             </Link>
             <div className="icon-container">
                 <Link to='https://www.linkedin.com/in/mina-kovacevic-a41524192/' target="_blank">
-                    <img src={linkedin}/>
+                    <img src={linkedin} alt='linkedin'/>
                 </Link>
                 <Link to='https://github.com/mkovace5' target='_blank'>
-                    <img src={github}/>
+                    <img src={github} alt='github'/>
                 </Link>
             </div>
        </div>
