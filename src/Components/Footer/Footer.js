@@ -14,14 +14,14 @@ function Footer () {
             <div className="footer">
                 <div className="name-container">
                     <Button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-                        <img src={minaLogo} className="logo"/>
+                        <img src={minaLogo} className="logo" alt='mina logo'/>
                     </Button>
                     <p className="copyright">Copyright © 2023 Mina Kovacevic. All rights reserved</p>
                 </div>
                 <div className="links-container">
-                    <Link className="link" to='https://www.linkedin.com/in/mina-kovacevic-a41524192/' target="_blank"><img src={linkedin}/></Link>
-                    <Link className="link" to='mailto:mina.k@hotmail.com' target="_blank"> <img src={email}/> </Link>
-                    <Link className="link" to='https://github.com/mkovace5' target="_blank"><img src={github} /></Link>
+                    <Link className="link" to='https://www.linkedin.com/in/mina-kovacevic-a41524192/' target="_blank" alt='linkedin'><img src={linkedin} alt='linkedin'/></Link>
+                    <Link className="link" to='mailto:mina.k@hotmail.com' target="_blank" alt='email'> <img src={email} alt='email'/> </Link>
+                    <Link className="link" to='https://github.com/mkovace5' target="_blank" alt='github'><img src={github} alt='github'/></Link>
                 </div>
             </div>
             <p className="copyright-mobile">Copyright © 2023 Mina Kovacevic. All rights reserved</p>

@@ -39,28 +39,28 @@ function Navbar({aboutRef, experienceRef, contactRef, projectsRef}){
                     <div className="nav-links-container">
                         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                             <li className='nav-item'>
-                                <Button onClick={() => {handleScroll(aboutRef.current);}} className='nav-links' >
+                                <Button onClick={() => {handleScroll(aboutRef.current);}} className='nav-links' alt='About'>
                                     ABOUT
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Button className='nav-links' onClick={() => {handleScroll(projectsRef.current);}}>
+                                <Button className='nav-links' alt='Projects' onClick={() => {handleScroll(projectsRef.current);}}>
                                     PROJECTS
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Button className='nav-links' onClick={() => {handleScroll(experienceRef.current);}}>
+                                <Button className='nav-links' alt='Experience' onClick={() => {handleScroll(experienceRef.current);}}>
                                     EXPERIENCE
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Button className='nav-links' onClick={() => {handleScroll(contactRef.current);}}>
+                                <Button className='nav-links' alt='Contact' onClick={() => {handleScroll(contactRef.current);}}>
                                     CONTACT
                                 </Button>
                             </li>
                             <li className='nav-item'>
-                                <Link to={minaCV} target="_blank">
-                                    <Button className='nav-links'>
+                                <Link to='https://mina-cv.s3.us-east-2.amazonaws.com/MinaKovacevic-CV.pdf' target="_blank">
+                                    <Button className='nav-links' alt='CV'>
                                         CV
                                     </Button>
                                 </Link>
