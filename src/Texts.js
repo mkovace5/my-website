@@ -8,5 +8,7 @@ export const MTO1 = 'Facilitated meetings with various project stakeholders';
 export const MTO2 = 'Delivered website updates to provide better organization and ease of use';
 export const MTO3 = 'Created IT analysis and presentation material for Director and CIO level consumption';
 
-export const Western1 = 'Software Engineering'
-export const Western2 = 'Recipient of Western Scholarship of Excellence; recognizes academic excellence in high school (average 90%-94.9%)'
+export const Western1 = 'Software Engineering';
+export const Western2 = 'Recipient of Western Scholarship of Excellence; recognizes academic excellence in high school (average 90%-94.9%)';
+
+// export const 
