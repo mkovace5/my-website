@@ -21,9 +21,12 @@
         margin-bottom: 36px;
     }
 
+    .project-links{
+        text-decoration: none;
+    }
     .projects-grid{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 

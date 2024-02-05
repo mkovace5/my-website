@@ -1,7 +1,6 @@
 import React, {useEffect, useState, forwardRef} from 'react';
 import './About.scss';
 import about_pic from '../../images/mina-pic.jpg';
-import zigzag from '../../images/zigzag.png';
 
 function About ( {aboutRef} ) {
 

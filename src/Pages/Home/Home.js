@@ -25,7 +25,7 @@ function Home () {
             <div className='home-container'>
                 <Intro/>
                 <About aboutRef={aboutRef}/>
-                <Projects projectsRef={projectsRef}/>
+                {/* <Projects projectsRef={projectsRef}/> */}
                 <Experience experienceRef={experienceRef}/>
                 <Contact contactRef={contactRef}/>
             </div>
