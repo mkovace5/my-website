@@ -12,6 +12,22 @@
     visibility: hidden;
     transition: opacity 1.2s ease-out, transform 1.2s ease-out;
     will-change: opacity, visibility;
+
+    h1{
+        text-decoration: underline dashed var(--hover-color);
+        text-underline-position: under;
+        -webkit-text-decoration: var(--hover-color) underline dashed;
+        -webkit-text-underline-position: under;
+        margin-bottom: 36px;
+    }
+
+    .project-links{
+        text-decoration: none;
+    }
+    .projects-grid{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .projects-container.is-visible{

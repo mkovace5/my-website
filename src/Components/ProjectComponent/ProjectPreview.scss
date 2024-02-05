@@ -2,7 +2,37 @@
 
 .project-preview{
     display: flex;
-    flex-direction: column;
-    background-color: var(--hover-color);
+    flex-direction: row;
+    background-color: var(--light-color);
+    width: 80vw;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-around;
     
+    // .overlay{
+    //     position: absolute;
+    //     top:0;
+    //     left:0;
+    //     background-color: rgb(244,243,232,0.35);
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 2;
+    //     cursor: pointer;
+    //     transition: background-color 0.5s ease-in-out;
+
+    // }
+    .overlay:hover{
+        background-color: rgb(244,243,232,0);
+    }
+    .title-info-container{
+        .project-title{
+            text-align: center;
+        }
+    }
+
+    .project-img{
+        position: relative;
+        width: 500px;
+        // height: 300px;
+    }
 }
