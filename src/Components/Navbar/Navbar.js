@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom'; 
 import './Navbar.scss';
 import { Button } from '../Button/Button';
-import minaCV from '../../Documents/MinaKovacevic-CV.pdf';
-
 
 function Navbar({aboutRef, experienceRef, contactRef, projectsRef}){
 
@@ -20,7 +18,7 @@ function Navbar({aboutRef, experienceRef, contactRef, projectsRef}){
           left: 0,
           behavior: "smooth",
         });
-      };
+    };
 
     const bringTo = () => {
         closeMobileMenu();
@@ -43,11 +41,11 @@ function Navbar({aboutRef, experienceRef, contactRef, projectsRef}){
                                     ABOUT
                                 </Button>
                             </li>
-                            {/* <li className='nav-item'>
+                            <li className='nav-item'>
                                 <Button className='nav-links' alt='Projects' onClick={() => {handleScroll(projectsRef.current);}}>
                                     PROJECTS
                                 </Button>
-                            </li> */}
+                            </li>
                             <li className='nav-item'>
                                 <Button className='nav-links' alt='Experience' onClick={() => {handleScroll(experienceRef.current);}}>
                                     EXPERIENCE

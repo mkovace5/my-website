@@ -3,12 +3,11 @@
 .project-preview{
     display: flex;
     flex-direction: row;
-    background-color: var(--light-color);
     width: 80vw;
-    overflow: hidden;
     position: relative;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    margin: 80px 0;
+
     // .overlay{
     //     position: absolute;
     //     top:0;
@@ -25,14 +24,107 @@
         background-color: rgb(244,243,232,0);
     }
     .title-info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
         .project-title{
-            text-align: center;
+            text-align: left;
         }
+
+    }
+    .title-info-container-left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: 64px;
+
+        p{
+            max-width: 500px;
+        }
+        .project-title{
+            text-align: left;
+        }
+
     }
 
-    .project-img{
-        position: relative;
-        width: 500px;
-        // height: 300px;
+    h2{
+        font-size: 32px;
     }
+
+    .image-container{
+        width: 650px;
+        display: flex;
+        justify-content: center;
+
+        .project-img{
+            position: relative;
+            border-radius: 5px;
+            z-index: 10;
+            width: 600px;
+            height: 400px;
+            box-shadow: 8px 7px 5px rgba(132, 131, 131, 0.243);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .project-img:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media screen and (max-width: 960px){
+    .project-preview{
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        position: relative;
+        justify-content: space-between;
+        margin: 80px 0;
+
+        .title-info-container-left{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-left: 0;
+    
+            p{
+                max-width: 500px;
+            }
+    
+        }
+    
+        h2{
+            font-size: 32px;
+            margin-bottom: 0px;
+        }
+    
+        .image-container{
+            width: auto;
+            display: flex;
+            justify-content: center;
+    
+            .project-img{
+                position: relative;
+                border-radius: 5px;
+                z-index: 10;
+                width: 100%;
+                height: auto;
+                box-shadow: 8px 7px 5px rgba(132, 131, 131, 0.243);
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .project-img:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .project-preview{
+        margin: 40px 0;
+    }
+
 }

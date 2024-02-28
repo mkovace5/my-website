@@ -1,6 +1,8 @@
 import React, {useEffect, useState, forwardRef} from 'react';
+import { Link } from 'react-router-dom';
 import './About.scss';
 import about_pic from '../../images/mina-pic.jpg';
+import { Button } from '../../Components/Button/Button';
 
 function About ( {aboutRef} ) {
 
